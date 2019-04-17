@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Step } from '../types';
+
 import Logo from './Logo';
 
-// interface Props {
-//   steps: { [key: string]: Step[] };
-//   location: any;
-// }
+interface Props {
+  steps: { [key: string]: Step[] };
+  siteTitle: any;
+}
 
-export default function Header({ steps, location }) {
+export default ({ siteTitle }) => {
   return (
     <div>
       <Logo />
     </div>
   );
-}
+};

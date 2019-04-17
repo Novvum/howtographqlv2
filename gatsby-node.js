@@ -20,9 +20,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `).catch(error => console.error(error));
-  console.log(data.allMdx.edges);
   data.allMdx.edges.forEach(({ node }) => {
-    console.log(node);
     createPage({
       path: `/tutorials${node.frontmatter.path}`,
       component: node.fileAbsolutePath,
